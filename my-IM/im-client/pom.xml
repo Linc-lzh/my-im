@@ -18,10 +18,10 @@
         <java.version>8</java.version>
     </properties>
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.tuling.netty</groupId>-->
-<!--            <artifactId>tim-common</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.im</groupId>
+            <artifactId>im-common</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,14 +68,4 @@
 <!--            <artifactId>tim-gateway-api</artifactId>-->
 <!--        </dependency>-->
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
