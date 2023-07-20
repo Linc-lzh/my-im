@@ -9,25 +9,43 @@
     </parent>
 
     <groupId>com.im</groupId>
-    <artifactId>im-client</artifactId>
+    <artifactId>im-gateway</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>im-client</name>
-    <description>im-client</description>
+    <name>im-gateway</name>
+    <description>im-gateway</description>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <swagger.version>2.5.0</swagger.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.im</groupId>
             <artifactId>im-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>com.im</groupId>
+            <artifactId>im-gateway-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.im</groupId>
+            <artifactId>im-server-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -37,6 +55,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -53,6 +72,11 @@
         </dependency>
 
         <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
@@ -60,17 +84,6 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vdurmont</groupId>
-            <artifactId>emoji-java</artifactId>
-            <version>5.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.im</groupId>
-            <artifactId>im-gateway-api</artifactId>
         </dependency>
     </dependencies>
 

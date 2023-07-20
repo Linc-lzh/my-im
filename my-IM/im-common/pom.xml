@@ -14,9 +14,6 @@
     <name>im-common</name>
     <description>im-common</description>
 
-    <properties>
-        <java.version>8</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -80,14 +77,4 @@
             <artifactId>guava</artifactId>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
